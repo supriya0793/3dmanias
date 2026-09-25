@@ -5,12 +5,13 @@ dist/
 .env
 .env.local
 push-private.sh
+push-simple.sh
+push-fix.sh
+compress-hero.sh
+public/hero-source.mov
 
 # Never publish the course archive
 private/
 *.rar
 *.zip
 *.7z
-push-fix.sh
-push-simple.sh
-push-private.sh

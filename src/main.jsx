@@ -337,7 +337,18 @@ function App() {
       </header>
 
       <section className="hero">
-        <div className="hero-media" aria-hidden="true" />
+        <div className="hero-media" aria-hidden="true">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            poster="/work/06.jpg"
+          >
+            <source src="/hero.mp4" type="video/mp4" />
+          </video>
+        </div>
         <div className="hero-overlay" />
         <div className="hero-content">
           <h1>

@@ -90,13 +90,17 @@ footer .logo img {
 }
 
 .hero-media {
-  animation: drift 18s ease-in-out infinite alternate;
-  background:
-    url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2200&q=90")
-    center / cover;
-  inset: -4%;
+  inset: 0;
+  overflow: hidden;
   position: absolute;
   z-index: -2;
+}
+
+.hero-media video {
+  animation: drift 18s ease-in-out infinite alternate;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
 }
 
 .hero-overlay {
