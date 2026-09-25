@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.DS_Store
+*.log
+.env
+.env.local
+
+# Never publish the course archive
+private/
+*.rar
+*.zip
+*.7z
