@@ -3,13 +3,15 @@ import { createRoot } from "react-dom/client";
 import {
   ArrowRight,
   Check,
+  ChevronLeft,
+  ChevronRight,
   Instagram,
   MessageCircle,
   MonitorPlay,
   Sparkles,
   X,
 } from "lucide-react";
-import { aboutCreator, course, site } from "./config";
+import { aboutCreator, course, site, workImages } from "./config";
 import "./styles.css";
 
 function Logo() {
@@ -17,6 +19,62 @@ function Logo() {
     <a className="logo" href="#top" aria-label="3D Manias home">
       <img src="/logo.gif" alt="3D Manias" />
     </a>
+  );
+}
+
+function WorkSlider() {
+  const [index, setIndex] = useState(0);
+  const total = workImages.length;
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setIndex((current) => (current + 1) % total);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, [total]);
+
+  function goTo(next) {
+    setIndex((next + total) % total);
+  }
+
+  return (
+    <div className="work-slider" aria-roledescription="carousel" aria-label="3D Manias work gallery">
+      {workImages.map((image, i) => (
+        <img
+          key={image.src}
+          src={image.src}
+          alt={image.alt}
+          className={i === index ? "active" : ""}
+        />
+      ))}
+      <div className="about-chip">
+        <MonitorPlay size={16} /> Recorded · Learn at your pace
+      </div>
+      <div className="slider-controls">
+        <button type="button" aria-label="Previous image" onClick={() => goTo(index - 1)}>
+          <ChevronLeft size={18} />
+        </button>
+        <button type="button" aria-label="Next image" onClick={() => goTo(index + 1)}>
+          <ChevronRight size={18} />
+        </button>
+      </div>
+      <div className="slider-dots" role="tablist" aria-label="Slide controls">
+        {workImages.map((image, i) => (
+          <button
+            key={image.src}
+            type="button"
+            role="tab"
+            aria-selected={i === index}
+            aria-label={`Show image ${i + 1}`}
+            className={i === index ? "active" : ""}
+            onClick={() => setIndex(i)}
+          />
+        ))}
+      </div>
+      <span className="slider-count">
+        {String(index + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
+      </span>
+    </div>
   );
 }
 
@@ -320,13 +378,7 @@ function App() {
           </a>
         </div>
         <div className="about-visual">
-          <img
-            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=85"
-            alt="Architectural interior visualisation"
-          />
-          <div className="about-chip">
-            <MonitorPlay size={16} /> Recorded · Learn at your pace
-          </div>
+          <WorkSlider />
         </div>
       </section>
 

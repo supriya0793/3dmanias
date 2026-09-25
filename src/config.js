@@ -41,6 +41,17 @@ export const course = {
     "Questions? DM us on Instagram or message us on WhatsApp.",
 };
 
+export const workImages = [
+  { src: "/work/01.jpg", alt: "Modern villa exterior visualisation" },
+  { src: "/work/02.jpg", alt: "Terracotta residence exterior visualisation" },
+  { src: "/work/03.jpg", alt: "Contemporary pink facade visualisation" },
+  { src: "/work/04.jpg", alt: "Tropical modern villa exterior" },
+  { src: "/work/05.jpg", alt: "White and wood residence detail" },
+  { src: "/work/06.jpg", alt: "Concrete and brick urban residence" },
+  { src: "/work/07.jpg", alt: "Classical modern luxury villa" },
+  { src: "/work/08.jpg", alt: "Family home exterior visualisation" },
+];
+
 export const aboutCreator = {
   name: "3D Manias",
   role: "AI Archviz · Interior & Exterior 3D Visualisation",
@@ -51,3 +62,4 @@ export const aboutCreator = {
     "Free and premium AI tools covered side by side",
   ],
 };
+
