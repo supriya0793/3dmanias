@@ -27,6 +27,7 @@ export const course = {
     "How to use Free AI tools for image generation",
     "How to use Premium/Paid AI tools for more advanced and professional results",
     "Practical workflows and techniques used in our live AI Archviz classes",
+    "You will also get prompts list",
   ],
   howToPurchase: [
     "Enter your Full Name and Email ID.",
