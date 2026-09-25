@@ -42,7 +42,7 @@ export const course = {
 
 export const aboutCreator = {
   name: "3D Manias",
-  role: "AI Archviz · Interior & 3D Visualisation",
+  role: "AI Archviz · Interior & Exterior 3D Visualisation",
   bio: "Helping designers and architects create stunning architectural visuals faster—with practical AI workflows taught from real studio experience.",
   points: [
     "Live + recorded masterclasses for busy creatives",
