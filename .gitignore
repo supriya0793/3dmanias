@@ -4,9 +4,13 @@ dist/
 *.log
 .env
 .env.local
+push-private.sh
 
 # Never publish the course archive
 private/
 *.rar
 *.zip
 *.7z
+push-fix.sh
+push-simple.sh
+push-private.sh

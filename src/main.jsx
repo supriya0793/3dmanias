@@ -282,7 +282,6 @@ function App() {
         <div className="hero-media" aria-hidden="true" />
         <div className="hero-overlay" />
         <div className="hero-content">
-          <p className="kicker">Instagram · {site.brand}</p>
           <h1>
             AI Archviz
             <br />
