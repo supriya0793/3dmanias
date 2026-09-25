@@ -273,7 +273,9 @@ function App() {
           <a href="#course">Course</a>
           <a href="#buy">Buy</a>
         </nav>
-        <span className="nav-spacer" aria-hidden="true" />
+        <a className="nav-ig" href={site.instagram} target="_blank" rel="noreferrer">
+          <Instagram size={16} /> Instagram
+        </a>
       </header>
 
       <section className="hero">
