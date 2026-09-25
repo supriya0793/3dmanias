@@ -76,6 +76,11 @@ footer .logo img {
   justify-self: end;
 }
 
+.nav-spacer {
+  justify-self: end;
+  width: 1px;
+}
+
 .hero {
   isolation: isolate;
   min-height: 100vh;
